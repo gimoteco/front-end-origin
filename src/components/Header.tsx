@@ -1,11 +1,14 @@
 import * as React from 'react';
+import Fade from 'react-reveal/Fade';
 import Logo from '../icons/logo.svg';
 import * as Style from './Header.styles';
 
 function Header() {
   return (
     <Style.HeaderWrapper>
-      <Logo />
+      <Fade left>
+        <Logo />
+      </Fade>
     </Style.HeaderWrapper>
   );
 }

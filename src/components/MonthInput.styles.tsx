@@ -6,10 +6,11 @@ export const StepButton = styled.button.attrs({
   background: ${p => p.theme.colors.border};
   color: ${p => p.theme.colors.gray};
   padding: 20px;
+  border: none;
 
   svg {
     display: block;
-    height: 16px;
+    width: 8px;
   }
 
   &:nth-of-type(2) > svg {

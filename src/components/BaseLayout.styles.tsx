@@ -15,6 +15,11 @@ export const Instruction = styled.p`
   }
 `;
 
+export const FormFieldsWrapper = styled.div`
+  padding: 0 8px;
+  margin-bottom: 2.25rem;
+`;
+
 export const MainContent = styled.main`
   ${Instruction} {
     margin: 24px 0;

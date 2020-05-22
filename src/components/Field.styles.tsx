@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const FieldWrapper = styled.div``;
+export const FieldWrapper = styled.div`
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+`;
+
 export const FieldLabel = styled.label`
   font-size: 1rem;
   font-weight: 500;

@@ -6,11 +6,12 @@ interface FieldProps {
   id: string;
   type: InputType;
   label: string;
+  className?: string;
 }
 
-function Field({ id, type, label }: FieldProps) {
+function Field({ id, type, label, className }: FieldProps) {
   return (
-    <Style.FieldWrapper>
+    <Style.FieldWrapper className={className}>
       <Style.FieldLabel htmlFor={id}>{label}</Style.FieldLabel>
       <Input id={id} type={type} />
     </Style.FieldWrapper>

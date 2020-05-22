@@ -16,7 +16,8 @@ export default {
     card: '0px 1px 4px rgba(150, 164, 176, 0.1)'
   },
   radii: {
-    card: '8px'
+    card: '8px',
+    segment: '4px'
   },
   sizes: {
     container: 960
