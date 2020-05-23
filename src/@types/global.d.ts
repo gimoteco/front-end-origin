@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom/extend-expect';
 import theme from '../styles/theme';
 
 type ThemeInterface = typeof theme;
