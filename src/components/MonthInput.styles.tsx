@@ -16,6 +16,14 @@ export const StepButton = styled.button.attrs({
   &:nth-of-type(2) > svg {
     transform: rotate(180deg);
   }
+
+  :disabled {
+    opacity: 0.2;
+  }
+
+  &:active {
+    filter: brightness(85%);
+  }
 `;
 
 export const MonthInputWrapper = styled.div`

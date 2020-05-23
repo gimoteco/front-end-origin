@@ -1,23 +1,47 @@
-import { addMonths, format as formatDate } from 'date-fns';
+import { addMonths, endOfMonth, isPast } from 'date-fns';
 import * as React from 'react';
+import { useHotkeys } from 'react-hotkeys-hook';
 import Arrow from '../icons/arrow.svg';
+import { parseDateParts } from '../utils/parser';
 import * as Style from './MonthInput.styles';
-function MonthInput() {
-  // const [month, year] = ['October', 2020];
-  const [monthDate, setMonth] = React.useState(new Date());
-  const month = formatDate(monthDate, 'LLLL');
-  const year = formatDate(monthDate, 'yyyy');
+
+function isPreviousMonthPast(date: Date) {
+  const previousMonth = endOfMonth(addMonths(date, -1));
+  return isPast(previousMonth);
+}
+
+interface MonthInputProps {
+  id: string;
+  value: Date | null;
+  onChange(newValue: Date): void;
+}
+
+function MonthInput({ id, value, onChange }: MonthInputProps) {
+  const [monthDate, setMonth] = React.useState(value);
+  const { month, year } = parseDateParts(monthDate);
+  const previousIsPast = isPreviousMonthPast(monthDate);
+  const inputRef = React.useRef(null);
 
   const goToPreviousMonth = React.useCallback(() => {
-    setMonth(addMonths(monthDate, -1));
-  }, [monthDate, setMonth]);
+    setMonth(monthDate => {
+      if (isPreviousMonthPast(monthDate)) return monthDate;
+      return addMonths(monthDate, -1);
+    });
+  }, [setMonth]);
   const goToNextMonth = React.useCallback(() => {
-    setMonth(addMonths(monthDate, 1));
-  }, [monthDate, setMonth]);
+    setMonth(monthDate => addMonths(monthDate, 1));
+  }, [setMonth]);
+
+  useHotkeys('left', goToPreviousMonth);
+  useHotkeys('right', goToNextMonth);
+
+  React.useEffect(() => {
+    onChange(monthDate);
+  }, [onChange, monthDate]);
 
   return (
-    <Style.MonthInputWrapper>
-      <Style.StepButton onClick={goToPreviousMonth}>
+    <Style.MonthInputWrapper id={id} ref={inputRef} tabIndex={0}>
+      <Style.StepButton disabled={previousIsPast} onClick={goToPreviousMonth}>
         <Arrow />
       </Style.StepButton>
       <Style.MonthIndicator>

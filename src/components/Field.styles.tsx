@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const FieldWrapper = styled.div`
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
 `;
 
 export const FieldLabel = styled.label`

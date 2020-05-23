@@ -6,7 +6,7 @@ import * as Style from './Header.styles';
 function Header() {
   return (
     <Style.HeaderWrapper>
-      <Fade left>
+      <Fade>
         <Logo />
       </Fade>
     </Style.HeaderWrapper>

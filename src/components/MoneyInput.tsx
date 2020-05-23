@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { MaskedInputProps } from 'react-text-mask';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+import { parseMoney } from '../utils/parser';
 import * as Style from './MoneyInput.styles';
 
 const defaultMaskOptions = {
@@ -17,12 +18,21 @@ const defaultMaskOptions = {
 };
 
 const currencyMask = createNumberMask(defaultMaskOptions);
+interface MoneyInputProps extends Omit<MaskedInputProps, 'onChange'> {
+  onChange(newValue: number | null): void;
+}
 
-function MoneyInput({ ...props }: MaskedInputProps) {
+function MoneyInput({ onChange, ...props }: MoneyInputProps) {
   return (
     <Style.InputWrapper>
       <Style.Prefix htmlFor={props.id}>$</Style.Prefix>
-      <Style.MaskedTextInput mask={currencyMask} {...props} />
+      <Style.MaskedTextInput
+        mask={currencyMask}
+        {...props}
+        onChange={e =>
+          onChange(e.target.value ? parseMoney(e.target.value) : null)
+        }
+      />
     </Style.InputWrapper>
   );
 }

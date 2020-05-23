@@ -6,6 +6,7 @@ export const SegmentWrapper = styled.div`
   box-shadow: ${theme.shadows.card};
   border: 1px solid ${theme.colors.border};
   color: ${theme.colors.text};
+  margin-top: 2rem;
 `}
 `;
 
