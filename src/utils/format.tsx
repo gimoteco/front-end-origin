@@ -1,4 +1,6 @@
-import { differenceInMonths } from 'date-fns';
+import { addDays, differenceInMonths } from 'date-fns';
+import { startOfMonth } from 'date-fns/esm';
+import { endOfMonth } from 'date-fns/esm/fp';
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -11,8 +13,11 @@ export function formatMoney(value: number) {
 }
 
 export function calculateMonthlyDeposit(total: number, reachDate: Date) {
-  const today = new Date();
-  const numberOfDeposits = differenceInMonths(reachDate, today);
+  const thisMonth = startOfMonth(new Date());
+  const endMonth = addDays(endOfMonth(reachDate), 1);
+
+  const numberOfDeposits = differenceInMonths(endMonth, thisMonth);
   const depositValue = total / numberOfDeposits;
+
   return { numberOfDeposits, depositValue };
 }

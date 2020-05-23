@@ -25,11 +25,11 @@ function MonthInput({ id, value, onChange }: MonthInputProps) {
   const goToPreviousMonth = React.useCallback(() => {
     setMonth(monthDate => {
       if (isPreviousMonthPast(monthDate)) return monthDate;
-      return addMonths(monthDate, -1);
+      return endOfMonth(addMonths(monthDate, -1));
     });
   }, [setMonth]);
   const goToNextMonth = React.useCallback(() => {
-    setMonth(monthDate => addMonths(monthDate, 1));
+    setMonth(monthDate => endOfMonth(addMonths(monthDate, 1)));
   }, [setMonth]);
 
   useHotkeys('left', goToPreviousMonth);
