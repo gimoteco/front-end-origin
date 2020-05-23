@@ -32,8 +32,9 @@ function SavingGoalScreen() {
       </Fade>
 
       <Card title="Buy a house" subtitle="Saving goal" icon={<HouseIcon />}>
-        <form>
+        <Style.Form>
           <Style.FormFieldsWrapper>
+            <Style.FieldsWrapper>
             <Field
               id="totalAmount"
               label="Total amount"
@@ -49,6 +50,8 @@ function SavingGoalScreen() {
               type={InputType.Month}
               onChange={(newValue: Date) => setReachDate(newValue)}
             />
+            </FieldsWrapper>
+
 
             <Segment>
               {{
@@ -63,7 +66,7 @@ function SavingGoalScreen() {
           </Style.FormFieldsWrapper>
 
           <Button>Confirm</Button>
-        </form>
+        </Style.Form>
       </Card>
     </BaseLayout>
   );

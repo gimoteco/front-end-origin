@@ -5,6 +5,7 @@ export const InputWrapper = styled.div`
   display: flex;
   align-items: stretch;
   width: 100%;
+  height: 64px;
 `;
 
 export const MaskedTextInput = styled(MaskedInput)`
@@ -19,6 +20,8 @@ export const MaskedTextInput = styled(MaskedInput)`
   width: 100%;
   flex: 1;
   outline-color: ${p => p.theme.colors.primary};
+  display: flex;
+  align-items: center;
 `;
 
 export const Prefix = styled.label`
@@ -30,4 +33,6 @@ export const Prefix = styled.label`
   font-size: 1.375rem;
   line-height: 1.625rem;
   margin-right: -1px;
+  display: flex;
+  align-items: center;
 `;

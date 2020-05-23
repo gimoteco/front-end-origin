@@ -1,11 +1,18 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const CardWrapper = styled.div`
   ${({ theme }) => `
-  background-color: ${theme.colors.white};
-  box-shadow: ${theme.shadows.card};
-  border-radius: 8px;
-  padding: 28px 16px;
+    background-color: ${theme.colors.white};
+    box-shadow: ${theme.shadows.card};
+    border-radius: 8px;
+    padding: 28px 16px;
+  `}
+
+  ${media.greaterThan('small')`
+    max-width: 560px;
+    box-shadow: ${p => p.theme.shadows.card};
+    border: 1px solid ${p => p.theme.colors.border};
   `}
 `;
 

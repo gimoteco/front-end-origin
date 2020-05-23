@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import media from 'styled-media-query';
 
 export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -48,4 +49,14 @@ table {
 }
 body {
   background-color: ${p => p.theme.colors.background};
-}`;
+}
+
+html {
+  font-size: 16px;
+}
+
+${media.greaterThan('small')`
+  html {
+    font-size: 17px;
+  }
+`}`;

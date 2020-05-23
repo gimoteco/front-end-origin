@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const HeaderWrapper = styled.header`
   background-color: ${p => p.theme.colors.white};
@@ -6,4 +7,10 @@ export const HeaderWrapper = styled.header`
   svg {
     width: 65px;
   }
+
+  ${media.greaterThan('small')`
+    svg {
+      width: 95px;
+    }
+  `}
 `;

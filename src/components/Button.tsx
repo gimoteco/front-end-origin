@@ -11,4 +11,5 @@ export default styled.button`
   width: 100%;
   border: none;
   padding: 1rem;
+  max-width: 400px;
 `;
