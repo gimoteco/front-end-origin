@@ -1,7 +1,5 @@
 import theme from '../styles/theme';
 
-declare module '*.svg';
-
 type ThemeInterface = typeof theme;
 
 declare module 'styled-components' {

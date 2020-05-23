@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Fade from 'react-reveal/Fade';
 import HouseIcon from '../icons/house.svg';
-import { calculateMonthlyDeposit } from '../utils/format';
+import { calculateMonthlyDeposit } from '../utils/calculateMonthlyDeposit';
 import { parseDateParts } from '../utils/parser';
 import BaseLayout from './BaseLayout';
 import Button from './Button';
@@ -27,7 +27,7 @@ function SavingGoalScreen() {
     <BaseLayout>
       <Fade>
         <Style.Instruction>
-          Let's plan your <strong>saving goal.</strong>
+          Let&apos;s plan your <strong>saving goal.</strong>
         </Style.Instruction>
       </Fade>
 
@@ -35,23 +35,22 @@ function SavingGoalScreen() {
         <Style.Form>
           <Style.FormFieldsWrapper>
             <Style.FieldsWrapper>
-            <Field
-              id="totalAmount"
-              label="Total amount"
-              value={total}
-              type={InputType.Money}
-              onChange={(newValue: number) => setTotal(newValue)}
-            />
+              <Field
+                id="totalAmount"
+                label="Total amount"
+                value={total}
+                type={InputType.Money}
+                onChange={(newValue: number) => setTotal(newValue)}
+              />
 
-            <Field
-              id="reachDate"
-              label="Reach goal by"
-              value={reachDate}
-              type={InputType.Month}
-              onChange={(newValue: Date) => setReachDate(newValue)}
-            />
-            </FieldsWrapper>
-
+              <Field
+                id="reachDate"
+                label="Reach goal by"
+                value={reachDate}
+                type={InputType.Month}
+                onChange={(newValue: Date) => setReachDate(newValue)}
+              />
+            </Style.FieldsWrapper>
 
             <Segment>
               {{
