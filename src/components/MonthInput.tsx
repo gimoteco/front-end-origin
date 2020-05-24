@@ -40,7 +40,12 @@ function MonthInput({ id, value, onChange }: MonthInputProps) {
   }, [onChange, monthDate]);
 
   return (
-    <Style.MonthInputWrapper id={id} ref={inputRef} tabIndex={0}>
+    <Style.MonthInputWrapper
+      data-testid={id}
+      id={id}
+      ref={inputRef}
+      tabIndex={0}
+    >
       <Style.StepButton disabled={previousIsPast} onClick={goToPreviousMonth}>
         <Arrow />
       </Style.StepButton>

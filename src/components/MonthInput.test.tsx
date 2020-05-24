@@ -64,4 +64,47 @@ describe('MonthInput', () => {
     expect(await findByText(currentYear)).toBeInTheDocument();
     expect(await findByText(currentMonth)).toBeInTheDocument();
   });
+
+  it('should navigate to the next month through keyboard right arrow', async () => {
+    const date = new Date();
+    const id = 'some-id';
+    const { month: nextMonth, year: nextMonthYear } = parseDateParts(
+      addMonths(date, 1)
+    );
+    const { getByTestId, findByText } = render(
+      <MonthInput id={id} value={date} onChange={jest.fn()} />
+    );
+    const input = await getByTestId(id);
+    console.log(date);
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowRight',
+      code: 'ArrowRight',
+      which: 39
+    });
+
+    expect(await findByText(nextMonthYear)).toBeInTheDocument();
+    expect(await findByText(nextMonth)).toBeInTheDocument();
+  });
+
+  it('should navigate to the previous month through keyboard left arrow', async () => {
+    const date = addMonths(new Date(), 5);
+    const { month: previousMonth, year: previousMonthYear } = parseDateParts(
+      addMonths(date, -1)
+    );
+    const id = 'some-id';
+    const { getByTestId, findByText } = render(
+      <MonthInput id={id} value={date} onChange={jest.fn()} />
+    );
+    const input = getByTestId(id);
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowLeft',
+      code: 'ArrowLeft',
+      which: 37
+    });
+
+    expect(await findByText(previousMonth)).toBeInTheDocument();
+    expect(await findByText(previousMonthYear)).toBeInTheDocument();
+  });
 });
