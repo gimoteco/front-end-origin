@@ -74,6 +74,7 @@ exports[`SavingGoalScreen should render according snapshot 1`] = `
                     class="sc-gZMcBi ipPELa"
                     data-testid="totalAmount"
                     id="totalAmount"
+                    type="text"
                     value=""
                   />
                 </div>
@@ -171,6 +172,7 @@ exports[`SavingGoalScreen should render according snapshot 1`] = `
           </div>
           <button
             class="sc-bxivhb bEbvQw"
+            type="button"
           >
             Confirm
           </button>

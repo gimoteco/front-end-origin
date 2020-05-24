@@ -24,6 +24,7 @@ exports[`Field should render money input according snapshot 1`] = `
         class="sc-bxivhb fqComY"
         data-testid="some-id"
         id="some-id"
+        type="text"
         value="40000"
       />
     </div>

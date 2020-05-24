@@ -5,6 +5,22 @@ import { parseDateParts } from '../utils/parser';
 import MonthInput from './MonthInput';
 
 describe('MonthInput', () => {
+  function pressLeftArrow(element: Element) {
+    fireEvent.keyDown(element, {
+      key: 'ArrowLeft',
+      code: 'ArrowLeft',
+      which: 37
+    });
+  }
+
+  function pressRightArrow(element: Element) {
+    fireEvent.keyDown(element, {
+      key: 'ArrowRight',
+      code: 'ArrowRight',
+      which: 39
+    });
+  }
+
   it('should display the month value', async () => {
     const date = new Date(2020, 0, 1);
     const { month, year } = parseDateParts(date);
@@ -74,13 +90,9 @@ describe('MonthInput', () => {
     const { getByTestId, findByText } = render(
       <MonthInput id={id} value={date} onChange={jest.fn()} />
     );
-    const input = await getByTestId(id);
+    const input = getByTestId(id);
 
-    fireEvent.keyDown(input, {
-      key: 'ArrowRight',
-      code: 'ArrowRight',
-      which: 39
-    });
+    pressRightArrow(input);
 
     expect(await findByText(nextMonthYear)).toBeInTheDocument();
     expect(await findByText(nextMonth)).toBeInTheDocument();
@@ -97,14 +109,33 @@ describe('MonthInput', () => {
     );
     const input = getByTestId(id);
 
-    fireEvent.keyDown(input, {
-      key: 'ArrowLeft',
-      code: 'ArrowLeft',
-      which: 37
-    });
+    pressLeftArrow(input);
 
     expect(await findByText(previousMonth)).toBeInTheDocument();
     expect(await findByText(previousMonthYear)).toBeInTheDocument();
+  });
+
+  it('should not navigate to the previous month through keyboard left arrow when previous is past', async () => {
+    const date = new Date();
+    const { month: previousMonth, year: previousMonthYear } = parseDateParts(
+      addMonths(date, -1)
+    );
+    const { month: currentMonth, year: currentMonthYear } = parseDateParts(
+      date
+    );
+    const id = 'some-id';
+    const { getByTestId, findByText, queryByText } = render(
+      <MonthInput id={id} value={date} onChange={jest.fn()} />
+    );
+    const input = getByTestId(id);
+
+    pressLeftArrow(input);
+
+    expect(
+      queryByText(previousMonth) && queryByText(previousMonthYear)
+    ).toBeNull();
+    expect(await findByText(currentMonth)).toBeInTheDocument();
+    expect(await findByText(currentMonthYear)).toBeInTheDocument();
   });
 
   it('should render according snapshot', () => {

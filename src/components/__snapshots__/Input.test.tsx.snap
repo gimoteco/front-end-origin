@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input should not render unknown input type 1`] = `<div />`;
+
 exports[`Input should render money input according snapshot 1`] = `
 <div>
   <div
@@ -15,6 +17,7 @@ exports[`Input should render money input according snapshot 1`] = `
       class="sc-bwzfXH cvgptw"
       data-testid="some-id"
       id="some-id"
+      type="text"
       value="40000"
     />
   </div>

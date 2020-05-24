@@ -61,7 +61,7 @@ function SavingGoalScreen() {
             </Segment>
           </Style.FormFieldsWrapper>
 
-          <Button>Confirm</Button>
+          <Button type="button">Confirm</Button>
         </Style.Form>
       </Card>
     </BaseLayout>

@@ -30,6 +30,7 @@ function MoneyInput({ onChange, ...props }: MoneyInputProps) {
         data-testid={props.id}
         mask={currencyMask}
         {...props}
+        type="text"
         onChange={e =>
           onChange(e.target.value ? parseMoney(e.target.value) : null)
         }

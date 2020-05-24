@@ -28,4 +28,18 @@ describe('Input', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should not render unknown input type', () => {
+    const typeNotImplemented = 9999;
+    const { container } = render(
+      <Input
+        id="some-id"
+        onChange={jest.fn()}
+        value={new Date(2200, 0, 1)}
+        type={typeNotImplemented}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -10,7 +10,7 @@ describe('MoneyInput', () => {
     const { getByTestId } = render(
       <MoneyInput id="moneyInput" onChange={onChangeMock} />
     );
-    const input = (await getByTestId('moneyInput')) as HTMLInputElement;
+    const input = getByTestId('moneyInput') as HTMLInputElement;
 
     fireEvent.change(input, {
       target: { value }
@@ -18,6 +18,20 @@ describe('MoneyInput', () => {
 
     expect(input.value).toBe(formatMoney(value).replace('$', ''));
     expect(onChangeMock).toHaveBeenCalledWith(value);
+  });
+
+  it('should clean the value', async () => {
+    const onChangeMock = jest.fn();
+    const { getByTestId } = render(
+      <MoneyInput id="moneyInput" onChange={onChangeMock} />
+    );
+    const input = getByTestId('moneyInput') as HTMLInputElement;
+
+    fireEvent.change(input, {
+      target: { value: null }
+    });
+
+    expect(input.value).toBe('');
   });
 
   it('should render according snapshot', () => {
