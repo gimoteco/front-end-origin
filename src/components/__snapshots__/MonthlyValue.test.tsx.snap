@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthlyValue should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa UTvpt"
+  >
+    <span
+      class="sc-bwzfXH doWSly"
+    >
+      Monthly
+    </span>
+    <span
+      class="sc-htpNat cEmdZK"
+    >
+      $200
+    </span>
+  </div>
+</div>
+`;

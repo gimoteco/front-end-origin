@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthInput should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bwzfXH iXwpvX"
+    data-testid="some-id"
+    id="some-id"
+    tabindex="0"
+  >
+    <button
+      class="sc-bdVaJa bWNBEi"
+      disabled=""
+      type="button"
+    >
+      <span />
+    </button>
+    <div
+      class="sc-htpNat gSEWri"
+    >
+      <span
+        class="sc-bxivhb AHobs"
+      >
+        January
+      </span>
+      <span
+        class="sc-ifAKCX kqPTaU"
+      >
+        2000
+      </span>
+    </div>
+    <button
+      class="sc-bdVaJa bWNBEi"
+      type="button"
+    >
+      <span />
+    </button>
+  </div>
+</div>
+`;

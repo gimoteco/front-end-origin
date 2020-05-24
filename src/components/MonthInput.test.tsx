@@ -75,7 +75,6 @@ describe('MonthInput', () => {
       <MonthInput id={id} value={date} onChange={jest.fn()} />
     );
     const input = await getByTestId(id);
-    console.log(date);
 
     fireEvent.keyDown(input, {
       key: 'ArrowRight',
@@ -106,5 +105,17 @@ describe('MonthInput', () => {
 
     expect(await findByText(previousMonth)).toBeInTheDocument();
     expect(await findByText(previousMonthYear)).toBeInTheDocument();
+  });
+
+  it('should render according snapshot', () => {
+    const { container } = render(
+      <MonthInput
+        id="some-id"
+        onChange={jest.fn()}
+        value={new Date(2000, 0, 1)}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
   });
 });

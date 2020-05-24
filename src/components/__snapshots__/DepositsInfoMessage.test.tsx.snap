@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DepositsInfoMessage should render according snapshot 1`] = `
+<div>
+  <p>
+    You’re planning 
+    <strong>
+      2
+       monthly deposits
+    </strong>
+     to reach your 
+    <strong>
+      $1,000
+    </strong>
+     goal by
+     
+    <strong>
+      March
+       
+      1991
+      .
+    </strong>
+  </p>
+</div>
+`;

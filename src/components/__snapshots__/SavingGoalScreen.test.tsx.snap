@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavingGoalScreen should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa hFUtUI"
+  >
+    <header
+      class="sc-htpNat fQvjWA"
+    >
+      <div
+        class="react-reveal"
+      >
+        <span />
+      </div>
+    </header>
+    <main
+      class="sc-bwzfXH hEEQmz"
+    >
+      <p
+        class="sc-kGXeez dlOmRw instruction"
+      >
+        Let's plan your 
+        <strong>
+          saving goal.
+        </strong>
+      </p>
+      <div
+        class="sc-ifAKCX bzTDQq"
+      >
+        <div
+          class="sc-gzVnrw liXRWx"
+        >
+          <span />
+          <h1
+            class="sc-EHOje eTDScl"
+          >
+            Buy a house
+          </h1>
+          <h2
+            class="sc-bZQynM Taavd"
+          >
+            Saving goal
+          </h2>
+        </div>
+        <form
+          class="sc-ckVGcZ hLslGA"
+        >
+          <div
+            class="sc-kpOJdX ejQcxA"
+          >
+            <div
+              class="sc-dxgOiQ jckyxV"
+            >
+              <div
+                class="sc-htoDjs bAnpk"
+              >
+                <label
+                  class="sc-dnqmqq bkKgUr"
+                  for="totalAmount"
+                >
+                  Total amount
+                </label>
+                <div
+                  class="sc-iwsKbI iTofTH"
+                >
+                  <label
+                    class="sc-gqjmRU jUvAWB"
+                    for="totalAmount"
+                  >
+                    $
+                  </label>
+                  <input
+                    class="sc-gZMcBi ipPELa"
+                    data-testid="totalAmount"
+                    id="totalAmount"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="sc-htoDjs bAnpk"
+              >
+                <label
+                  class="sc-dnqmqq bkKgUr"
+                  for="reachDate"
+                >
+                  Reach goal by
+                </label>
+                <div
+                  class="sc-jTzLTM dQdxiU"
+                  data-testid="reachDate"
+                  id="reachDate"
+                  tabindex="0"
+                >
+                  <button
+                    class="sc-VigVT cQoHTC"
+                    disabled=""
+                    type="button"
+                  >
+                    <span />
+                  </button>
+                  <div
+                    class="sc-fjdhpX jKSagH"
+                  >
+                    <span
+                      class="sc-jzJRlG kFLwJY"
+                    >
+                      May
+                    </span>
+                    <span
+                      class="sc-cSHVUG zqSoN"
+                    >
+                      2020
+                    </span>
+                  </div>
+                  <button
+                    class="sc-VigVT cQoHTC"
+                    type="button"
+                  >
+                    <span />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jKJlTe kdnoMZ"
+            >
+              <div
+                class="sc-eNQAEJ ckPgud"
+              >
+                <div
+                  class="sc-kAzzGY ftdBxt"
+                >
+                  <span
+                    class="sc-chPdSV kMTFUo"
+                  >
+                    Monthly
+                  </span>
+                  <span
+                    class="sc-kgoBCf bjhxvA"
+                  >
+                    $0
+                  </span>
+                </div>
+              </div>
+              <div
+                class="sc-hMqMXs nVhyb"
+              >
+                <p>
+                  You’re planning 
+                  <strong>
+                    1
+                     monthly deposits
+                  </strong>
+                   to reach your 
+                  <strong>
+                    $0
+                  </strong>
+                   goal by
+                   
+                  <strong>
+                    May
+                     
+                    2020
+                    .
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="sc-bxivhb bEbvQw"
+          >
+            Confirm
+          </button>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+`;

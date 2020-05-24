@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render according snapshot 1`] = `
+<div>
+  <header
+    class="sc-bdVaJa qMBHx"
+  >
+    <div
+      class="react-reveal"
+    >
+      <span />
+    </div>
+  </header>
+</div>
+`;

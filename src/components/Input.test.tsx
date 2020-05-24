@@ -1,0 +1,31 @@
+import React from 'react';
+import { render } from '../../jest/test-utils';
+import Input, { InputType } from './Input';
+
+describe('Input', () => {
+  it('should render money input according snapshot', () => {
+    const { container } = render(
+      <Input
+        id="some-id"
+        onChange={jest.fn()}
+        value={40000}
+        type={InputType.Money}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render month input according snapshot', () => {
+    const { container } = render(
+      <Input
+        id="some-id"
+        onChange={jest.fn()}
+        value={new Date(2200, 0, 1)}
+        type={InputType.Month}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+});

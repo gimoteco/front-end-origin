@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Segment should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa egBlud"
+  >
+    <div
+      class="sc-bwzfXH UBTUY"
+    >
+      Hello World
+    </div>
+    <div
+      class="sc-htpNat fSDQmJ"
+    >
+      an awesome world
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseLayout should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa hFUtUI"
+  >
+    <header
+      class="sc-htpNat fQvjWA"
+    >
+      <div
+        class="react-reveal"
+      >
+        <span />
+      </div>
+    </header>
+    <main
+      class="sc-bwzfXH hEEQmz"
+    >
+      Hello World
+    </main>
+  </div>
+</div>
+`;

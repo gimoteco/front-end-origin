@@ -19,4 +19,12 @@ describe('MoneyInput', () => {
     expect(input.value).toBe(formatMoney(value).replace('$', ''));
     expect(onChangeMock).toHaveBeenCalledWith(value);
   });
+
+  it('should render according snapshot', () => {
+    const { container } = render(
+      <MoneyInput id="some-id" onChange={jest.fn()} value={40000} />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

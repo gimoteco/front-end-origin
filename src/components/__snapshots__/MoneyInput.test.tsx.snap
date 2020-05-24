@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoneyInput should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa djcBRL"
+  >
+    <label
+      class="sc-htpNat eRwJqC"
+      for="some-id"
+    >
+      $
+    </label>
+    <input
+      class="sc-bwzfXH cvgptw"
+      data-testid="some-id"
+      id="some-id"
+      value="40000"
+    />
+  </div>
+</div>
+`;

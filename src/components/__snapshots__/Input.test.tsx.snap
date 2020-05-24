@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render money input according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa djcBRL"
+  >
+    <label
+      class="sc-htpNat eRwJqC"
+      for="some-id"
+    >
+      $
+    </label>
+    <input
+      class="sc-bwzfXH cvgptw"
+      data-testid="some-id"
+      id="some-id"
+      value="40000"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input should render month input according snapshot 1`] = `
+<div>
+  <div
+    class="sc-ifAKCX cNXLUN"
+    data-testid="some-id"
+    id="some-id"
+    tabindex="0"
+  >
+    <button
+      class="sc-bxivhb dsqJjx"
+      type="button"
+    >
+      <span />
+    </button>
+    <div
+      class="sc-EHOje jAvrM"
+    >
+      <span
+        class="sc-bZQynM hkRXLa"
+      >
+        January
+      </span>
+      <span
+        class="sc-gzVnrw ioEuae"
+      >
+        2200
+      </span>
+    </div>
+    <button
+      class="sc-bxivhb dsqJjx"
+      type="button"
+    >
+      <span />
+    </button>
+  </div>
+</div>
+`;

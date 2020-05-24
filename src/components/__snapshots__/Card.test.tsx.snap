@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render according snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa jnieHq"
+  >
+    <div
+      class="sc-bxivhb iBTOsM"
+    >
+      <h1
+        class="sc-bwzfXH tnVib"
+      >
+        Hello World
+      </h1>
+      <h2
+        class="sc-htpNat gIpqKU"
+      >
+        awesome subtitle
+      </h2>
+    </div>
+    Hello World
+  </div>
+</div>
+`;
