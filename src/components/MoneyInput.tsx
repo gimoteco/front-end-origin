@@ -27,6 +27,7 @@ function MoneyInput({ onChange, ...props }: MoneyInputProps) {
     <Style.InputWrapper>
       <Style.Prefix htmlFor={props.id}>$</Style.Prefix>
       <Style.MaskedTextInput
+        data-testid={props.id}
         mask={currencyMask}
         {...props}
         onChange={e =>
