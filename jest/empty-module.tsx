@@ -1,4 +1,6 @@
-// @ts-ignore
 import * as React from 'react';
-export default 'svg-url';
-export const ReactComponent = 'div';
+const SvgrMock = () => <span />;
+
+export default SvgrMock;
+
+export const ReactComponent = SvgrMock;

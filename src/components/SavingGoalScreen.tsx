@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Fade from 'react-reveal/Fade';
 import HouseIcon from '../icons/house.svg';
 import { calculateMonthlyDeposit } from '../utils/calculateMonthlyDeposit';
 import { parseDateParts } from '../utils/parser';
@@ -25,11 +24,9 @@ function SavingGoalScreen() {
 
   return (
     <BaseLayout>
-      <Fade>
-        <Style.Instruction>
-          Let&apos;s plan your <strong>saving goal.</strong>
-        </Style.Instruction>
-      </Fade>
+      <Style.Instruction className="instruction">
+        Let&apos;s plan your <strong>saving goal.</strong>
+      </Style.Instruction>
 
       <Card title="Buy a house" subtitle="Saving goal" icon={<HouseIcon />}>
         <Style.Form>

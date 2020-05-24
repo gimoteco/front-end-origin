@@ -52,9 +52,7 @@ describe('MonthInput', () => {
   it('shouldn`t go to the previous month if is past', async () => {
     const date = new Date();
     const { month: currentMonth, year: currentYear } = parseDateParts(date);
-    const { month: previousMonth, year: previousMonthYear } = parseDateParts(
-      addMonths(date, -1)
-    );
+    const { month: previousMonth } = parseDateParts(addMonths(date, -1));
 
     const { findAllByRole, findByText, queryAllByText } = render(
       <MonthInput id="some-id" value={date} onChange={jest.fn()} />

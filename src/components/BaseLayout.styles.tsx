@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { Instruction } from './SavingGoalScreen.styles';
 
 export const BaseLayoutWrapper = styled.div`
   min-height: 100vh;
@@ -13,7 +12,7 @@ export const BaseLayoutWrapper = styled.div`
 `;
 
 export const MainContent = styled.main`
-  ${Instruction} {
+  .instruction {
     margin: 24px 0;
   }
 
